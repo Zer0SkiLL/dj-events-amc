@@ -1,0 +1,21 @@
+// tsconfig.json or jsconfig.json
+
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@components/*": ["src/components/*"],
+        "@assets/*": ["src/assets/*"],
+        "@layout/*": ["src/layout/*"],
+        "@pages/*": ["src/pages/*"],
+        "@styles/*": ["src/styles/*"],
+        "@utils/*": ["src/utils/*"],
+        "@config/*": ["src/config/*"],
+        "@context/*": ["src/context/*"],
+        "@helpers/*": ["src/helpers/*"]
+      }
+    },
+    "include": ["."],
+    "exclude": ["node_modules"]
+  }
+  
