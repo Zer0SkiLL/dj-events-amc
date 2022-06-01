@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "guest_lists",
+  "info": {
+    "singularName": "guest-list",
+    "pluralName": "guest-lists",
+    "displayName": "Guest",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Firstname": {
+      "type": "string"
+    },
+    "Lastname": {
+      "type": "string"
+    },
+    "addedBy": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "guest_lists"
+    },
+    "Option": {
+      "type": "enumeration",
+      "enum": [
+        "FriendsList",
+        "GuestList"
+      ]
+    },
+    "event": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event.event",
+      "inversedBy": "guests"
+    }
+  }
+}
